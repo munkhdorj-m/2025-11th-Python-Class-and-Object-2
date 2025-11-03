@@ -10,7 +10,6 @@ https://drive.google.com/file/d/1GHMSwiOsYEQY1oRaJ548FfOX41OujLdd/view?usp=shari
 ## Exercise 1
 
 **Problem:**
-<pre>
 Create a class Library that:  
     &nbsp;-Has a list of available books  
 Methods:  
@@ -18,7 +17,6 @@ Methods:
     &nbsp;-borrow_book(title) – removes from list if available  
   &nbsp;  -return_book(title) – adds back  
    &nbsp; -show_books() – displays all books  
-</pre>
     
 Example:
 
@@ -64,9 +62,9 @@ Example:
 Create a class Song with title, artist, duration.  
 Create a class Playlist with:  
 Methods:  
-    -add_song(song)  
-    -total_duration()  
-    -show_songs()  
+ &nbsp;   -add_song(song)  
+  &nbsp;  -total_duration()  
+  &nbsp;  -show_songs()  
 
 Example: 
 
