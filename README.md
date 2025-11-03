@@ -10,7 +10,7 @@ https://drive.google.com/file/d/1GHMSwiOsYEQY1oRaJ548FfOX41OujLdd/view?usp=shari
 ## Exercise 1
 
 **Problem:**
-
+<pre>
 Create a class Library that:  
     -Has a list of available books  
 Methods:  
@@ -18,7 +18,8 @@ Methods:
     -borrow_book(title) – removes from list if available  
     -return_book(title) – adds back  
     -show_books() – displays all books  
-
+<pre>
+    
 Example:
 
     Input:
