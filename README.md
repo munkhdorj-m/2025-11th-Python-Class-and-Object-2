@@ -11,13 +11,13 @@ https://drive.google.com/file/d/1GHMSwiOsYEQY1oRaJ548FfOX41OujLdd/view?usp=shari
 
 **Problem:**
 
-Create a class Library that:
-  -Has a list of available books
-Methods:
-  -add_book(title)
-  -borrow_book(title) – removes from list if available
-  -return_book(title) – adds back
-  -show_books() – displays all books
+Create a class Library that:  
+  -Has a list of available books  
+Methods:  
+  -add_book(title)  
+  -borrow_book(title) – removes from list if available  
+  -return_book(title) – adds back  
+  -show_books() – displays all books  
 
 Example:
 
@@ -37,12 +37,12 @@ Example:
 
 **Problem:**
 
-Create a class Player with:
-  -Attributes: name, health = 100, score = 0
-Methods:
-  -take_damage(amount) – reduce health but not below 0
-  -add_score(points)
-  -is_alive() – returns True if health > 0
+Create a class Player with:  
+  -Attributes: name, health = 100, score = 0  
+Methods:  
+  -take_damage(amount) – reduce health but not below 0   
+  -add_score(points)  
+  -is_alive() – returns True if health > 0  
 
 Example:
 
@@ -60,12 +60,12 @@ Example:
 
 **Problem:**
 
-Create a class Song with title, artist, duration.
-Create a class Playlist with:
-Methods:
-  -add_song(song)
-  -total_duration()
-  -show_songs()
+Create a class Song with title, artist, duration.  
+Create a class Playlist with:  
+Methods:  
+  -add_song(song)  
+  -total_duration()  
+  -show_songs()  
 
 Example: 
 
