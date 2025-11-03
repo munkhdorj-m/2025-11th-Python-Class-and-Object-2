@@ -63,7 +63,8 @@ Example:
 **Problem:**
 
 Create a class Song with title, artist, duration.  
-Create a class Playlist with:  
+Create a class Playlist with:
+Attribute: -song_list
 Methods:  
  &nbsp;   -add_song(song)  
   &nbsp;  -total_duration()  
