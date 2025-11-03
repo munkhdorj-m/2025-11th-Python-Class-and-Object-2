@@ -12,12 +12,12 @@ https://drive.google.com/file/d/1GHMSwiOsYEQY1oRaJ548FfOX41OujLdd/view?usp=shari
 **Problem:**
 <pre>
 Create a class Library that:  
-    -Has a list of available books  
+    &nbsp;-Has a list of available books  
 Methods:  
-    -add_book(title)  
-    -borrow_book(title) – removes from list if available  
-    -return_book(title) – adds back  
-    -show_books() – displays all books  
+   &nbsp; -add_book(title)  
+    &nbsp;-borrow_book(title) – removes from list if available  
+  &nbsp;  -return_book(title) – adds back  
+   &nbsp; -show_books() – displays all books  
 </pre>
     
 Example:
@@ -39,11 +39,11 @@ Example:
 **Problem:**
 
 Create a class Player with:  
-    -Attributes: name, health = 100, score = 0  
+&nbsp;    -Attributes: name, health = 100, score = 0  
 Methods:  
-    -take_damage(amount) – reduce health but not below 0   
-    -add_score(points)  
-    -is_alive() – returns True if health > 0  
+&nbsp;    -take_damage(amount) – reduce health but not below 0   
+&nbsp;    -add_score(points)  
+ &nbsp;   -is_alive() – returns True if health > 0  
 
 Example:
 
