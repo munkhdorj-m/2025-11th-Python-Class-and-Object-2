@@ -18,7 +18,7 @@ Methods:
     -borrow_book(title) – removes from list if available  
     -return_book(title) – adds back  
     -show_books() – displays all books  
-<pre>
+</pre>
     
 Example:
 
