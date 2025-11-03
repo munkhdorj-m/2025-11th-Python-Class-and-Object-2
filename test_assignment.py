@@ -1,41 +1,47 @@
+# test_assignment.py
 import pytest
-from assignment import Rectangle, Book, ShoppingCart
+from assignment import Library, Player, Song, Playlist
 
-@pytest.mark.parametrize("length, width, expected_area, expected_perimeter", [
-    (5, 3, 15, 16),   # normal case
-    (10, 2, 20, 24),  # different ratio
-    (1, 1, 1, 4),     # square
-    (0, 5, 0, 10),    # zero length edge case
+
+# ---------- Test Library ----------
+@pytest.mark.parametrize("titles,borrow,expected", [
+    (["1984", "The Hobbit"], "1984", "Available books:\nThe Hobbit"),
+    (["Dune"], "Dune", "No books available"),
+    (["A", "B", "C"], "X", "Available books:\nA\nB\nC"),
 ])
-def test1(length, width, expected_area, expected_perimeter):
-    rect = Rectangle(length, width)
-    assert rect.area() == expected_area
-    assert rect.perimeter() == expected_perimeter
+def test_library(titles, borrow, expected):
+    lib = Library()
+    for t in titles:
+        lib.add_book(t)
+    lib.borrow_book(borrow)
+    assert lib.show_books() == expected
 
-@pytest.mark.parametrize("title, author, price, expected_output", [
-    ("Python Basics", "Alice", 29.99, "Title: Python Basics, Author: Alice, Price: $29.99"),
-    ("AI Guide", "Bob", 45.5, "Title: AI Guide, Author: Bob, Price: $45.5"),
-    ("Data Science", "Charlie", 0, "Title: Data Science, Author: Charlie, Price: $0"),
+
+# ---------- Test Player ----------
+@pytest.mark.parametrize("damage,score,expected_health,expected_alive", [
+    (30, 50, 70, True),
+    (100, 10, 0, False),
+    (120, 0, 0, False),
 ])
-def test2(title, author, price, expected_output):
-    book = Book(title, author, price)
-    assert book.display() == expected_output
+def test_player(damage, score, expected_health, expected_alive):
+    p = Player("John")
+    p.take_damage(damage)
+    p.add_score(score)
+    assert p.health == expected_health
+    assert p.is_alive() == expected_alive
 
-def test3_1():
-    cart = ShoppingCart()
-    cart.add_item("Apple", 1.5)
-    cart.add_item("Banana", 2.0)
-    cart.add_item("Book", 10.0)
-    assert cart.total_price() == pytest.approx(13.5)
 
-@pytest.mark.parametrize("items, expected_output, expected_total", [
-    ([("Pen", 2), ("Notebook", 5)], "Pen: $2\nNotebook: $5", 7),
-    ([("Milk", 3.5)], "Milk: $3.5", 3.5),
-    ([("A", 1), ("B", 2), ("C", 3)], "A: $1\nB: $2\nC: $3", 6),
-])
-def test3_2(items, expected_output, expected_total):
-    cart = ShoppingCart()
-    for name, price in items:
-        cart.add_item(name, price)
-    assert cart.show_items() == expected_output
-    assert cart.total_price() == expected_total
+# ---------- Test Playlist ----------
+def test_playlist_add_and_show():
+    s1 = Song("Imagine", "John Lennon", 3.5)
+    s2 = Song("Hey Jude", "The Beatles", 4.2)
+    pl = Playlist()
+    pl.add_song(s1)
+    pl.add_song(s2)
+    expected = (
+        "1. Imagine - John Lennon (3.5 min)\n"
+        "2. Hey Jude - The Beatles (4.2 min)\n"
+        "Total: 7.7 min"
+    )
+    assert pl.show_songs() == expected
+    assert pl.total_duration() == pytest.approx(7.7)
