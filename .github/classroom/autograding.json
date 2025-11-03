@@ -21,7 +21,7 @@
       },
       {
         "name": "exercise3",
-        "run": "pytest test_assignment.py::test3_1",
+        "run": "pytest test_assignment.py::test3",
         "input": "",
         "output": "",
         "comparison": "included",
