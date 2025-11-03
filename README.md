@@ -30,6 +30,8 @@ Example:
     Output:
       Available books:
       The Hobbit
+    Output: (If there is no book)
+      No books available
 ---
 
 ## Exercise 2
