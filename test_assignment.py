@@ -9,7 +9,7 @@ from assignment import Library, Player, Song, Playlist
     (["Dune"], "Dune", "No books available"),
     (["A", "B", "C"], "X", "Available books:\nA\nB\nC"),
 ])
-def test_library(titles, borrow, expected):
+def test1(titles, borrow, expected):
     lib = Library()
     for t in titles:
         lib.add_book(t)
@@ -23,7 +23,7 @@ def test_library(titles, borrow, expected):
     (100, 10, 0, False),
     (120, 0, 0, False),
 ])
-def test_player(damage, score, expected_health, expected_alive):
+def test2(damage, score, expected_health, expected_alive):
     p = Player("John")
     p.take_damage(damage)
     p.add_score(score)
@@ -32,7 +32,7 @@ def test_player(damage, score, expected_health, expected_alive):
 
 
 # ---------- Test Playlist ----------
-def test_playlist_add_and_show():
+def test3():
     s1 = Song("Imagine", "John Lennon", 3.5)
     s2 = Song("Hey Jude", "The Beatles", 4.2)
     pl = Playlist()
