@@ -1,4 +1,4 @@
-# Python Class and Objects
+# Python Class and Objects 2
 
 Python Class and Objects PDF:
 
@@ -11,38 +11,76 @@ https://drive.google.com/file/d/1GHMSwiOsYEQY1oRaJ548FfOX41OujLdd/view?usp=shari
 
 **Problem:**
 
-- Create a `Rectangle` class with:
-  - Attributes: `length`, `width`
-  - Methods:
-    - `area()` → returns the area
-    - `perimeter()` → returns the perimeter
+Create a class Library that:
+  -Has a list of available books
+Methods:
+  -add_book(title)
+  -borrow_book(title) – removes from list if available
+  -return_book(title) – adds back
+  -show_books() – displays all books
 
+Example:
+
+    Input:
+      lib = Library()
+      lib.add_book("1984")
+      lib.add_book("The Hobbit")
+      lib.borrow_book("1984")
+      lib.show_books()
+    
+    Output:
+      Available books:
+      The Hobbit
 ---
 
 ## Exercise 2
 
 **Problem:**
 
-- Create a `Book` class with:
-  - Attributes: `title`, `author`, `price`
-  - Method:
-    - `display()` → returns formatted string
+Create a class Player with:
+  -Attributes: name, health = 100, score = 0
+Methods:
+  -take_damage(amount) – reduce health but not below 0
+  -add_score(points)
+  -is_alive() – returns True if health > 0
 
 Example:
 
-    Input: b1 = Book("Python Basics", "Alice", 29.99)
-           print(b1.display())
-    Output: Title: Python Basics, Author: Alice, Price: $29.99
+    Input: 
+      p = Player("John")
+      p.take_damage(30)
+      p.add_score(50)
+      print(p.is_alive())  # True
+      
+    Output:
+      True
 ---
 
 ## Exercise 3
 
 **Problem:**
 
-- Create a `ShoppingCart` class with:
-  - Method `add_item(name, price)` # where name and price are list
-  - Method `total_price()` → returns total cost
-  - Method `show_items()` → returns all items neatly listed
-    
+Create a class Song with title, artist, duration.
+Create a class Playlist with:
+Methods:
+  -add_song(song)
+  -total_duration()
+  -show_songs()
+
+Example: 
+
+    Input: 
+      s1 = Song("Imagine", "John Lennon", 3.5)
+      s2 = Song("Hey Jude", "The Beatles", 4.2)
+      pl = Playlist()
+      pl.add_song(s1)
+      pl.add_song(s2)
+      pl.show_songs()
+
+    Output:
+      1. Imagine - John Lennon (3.5 min)
+      2. Hey Jude - The Beatles (4.2 min)
+      Total: 7.7 min
+      
 ---
 
