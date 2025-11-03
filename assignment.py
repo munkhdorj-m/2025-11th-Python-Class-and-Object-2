@@ -10,9 +10,6 @@ class Library:
     def borrow_book(self, title):
         if title in self.books:
             self.books.remove(title)
-            return f'You borrowed "{title}"'
-        else:
-            return f'"{title}" is not available'
 
     def return_book(self, title):
         self.books.append(title)
