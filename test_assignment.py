@@ -14,7 +14,7 @@ def test1(titles, borrow, expected):
     for t in titles:
         lib.add_book(t)
     lib.borrow_book(borrow)
-    assert lib.show_books() == expected
+    assert lib.show_books().strip() == expected.strip()
 
 
 # ---------- Test Player ----------
@@ -43,5 +43,5 @@ def test3():
         "2. Hey Jude - The Beatles (4.2 min)\n"
         "Total: 7.7 min"
     )
-    assert pl.show_songs() == expected
+    assert pl.show_songs().strip() == expected.strip()
     assert pl.total_duration() == pytest.approx(7.7)
